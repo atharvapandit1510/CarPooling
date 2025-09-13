@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Community Carpooling</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🚗 Community Carpooling</h1>
+        <p class="subtitle">Connect with drivers and passengers for a smoother commute.</p>
+
+        <div class="role-selector">
+            <button id="driverBtn" class="role-button">I'm a Driver</button>
+            <button id="passengerBtn" class="role-button">I'm a Passenger</button>
+        </div>
+
+        <div id="driverSection" class="form-section hidden">
+            <h2>Post a Ride</h2>
+            <form id="driverForm">
+                <label for="d-source"><i class="fas fa-map-marker-alt"></i> Source:</label>
+                <input type="text" id="d-source" required />
+
+                <label for="d-destination"><i class="fas fa-route"></i> Destination:</label>
+                <input type="text" id="d-destination" required />
+
+                <label for="d-date"><i class="fas fa-calendar-alt"></i> Date:</label>
+                <input type="date" id="d-date" required />
+
+                <label for="d-time"><i class="fas fa-clock"></i> Time:</label>
+                <input type="time" id="d-time" required />
+
+                <label for="d-seats"><i class="fas fa-chair"></i> Available Seats:</label>
+                <input type="number" id="d-seats" min="1" required />
+                
+                <label for="d-contact"><i class="fas fa-envelope"></i> Email or Phone:</label>
+                <input type="text" id="d-contact" placeholder="Email or Phone Number" required />
+
+                <button type="submit">Post Ride</button>
+            </form>
+            <div id="driverMessage" class="feedback-message"></div>
+        </div>
+
+        <div id="passengerSection" class="form-section hidden">
+            <h2>Find a Ride</h2>
+            <form id="passengerForm">
+                <label for="p-source"><i class="fas fa-map-marker-alt"></i> Source:</label>
+                <input type="text" id="p-source" required />
+
+                <label for="p-destination"><i class="fas fa-route"></i> Destination:</label>
+                <input type="text" id="p-destination" required />
+
+                <button type="submit">Find Rides</button>
+            </form>
+        </div>
+
+        <div id="results"></div>
+    </div>
+    <script src="first.js"></script>
+</body>
+</html>

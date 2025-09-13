@@ -1,0 +1,215 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    background: linear-gradient(120deg, #a6c0fe, #f68084);
+    padding: 30px 10px;
+    color: #333;
+}
+
+h1 {
+    text-align: center;
+    color: #ffffff;
+    margin-bottom: 5px;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+}
+
+.subtitle {
+    text-align: center;
+    color: #ffffff;
+    margin-bottom: 25px;
+    font-size: 1.1em;
+}
+
+.container {
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 12px;
+    max-width: 600px;
+    margin: auto;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.role-selector {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 25px;
+}
+
+.role-button {
+    flex-grow: 1;
+    margin: 0 5px;
+    padding: 12px;
+    border: 2px solid #4CAF50;
+    background-color: #ffffff;
+    color: #4CAF50;
+    font-weight: bold;
+    font-size: 1em;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.role-button:hover {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.form-section.hidden {
+    display: none;
+}
+
+h2 {
+    color: #555;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+}
+
+label {
+    display: block;
+    margin: 10px 0 5px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+input,
+select,
+button {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 16px;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+.ride-card {
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin-top: 15px;
+    border-radius: 8px;
+    background: #f1faff;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.ride-card p {
+    margin: 5px 0;
+}
+
+.ride-card strong {
+    color: #333;
+}
+
+.request-btn {
+    margin-top: 15px;
+    background-color: #2196F3;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.request-btn:hover {
+    background-color: #0b7dda;
+}
+
+.no-results {
+    text-align: center;
+    color: #999;
+    font-style: italic;
+    margin-top: 20px;
+}
+
+.feedback-message {
+    margin-top: 15px;
+    padding: 10px;
+    border-radius: 6px;
+    text-align: center;
+    font-weight: bold;
+    color: #28a745;
+    background-color: #d4edda;
+}
+
+.fa-solid, .fa-regular, .fa-brands {
+    color: #4CAF50; 
+}
+
+.contact-btn {
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    margin-top: 15px;
+    background-color: #2196F3;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.contact-btn:hover {
+    background-color: #0b7dda;
+}
+
+/* Animation for individual ride cards */
+.animated-card {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInSlideUp 0.5s forwards ease-out;
+}
+
+/* ... (Keep all previous styles) ... */
+
+/* Animation for the form sections */
+.form-section {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInSlideUp 0.6s forwards ease-out;
+}
+
+@keyframes fadeInSlideUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Add a hover effect for buttons */
+button, .contact-btn {
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover, .contact-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Add a transition to the ride cards for a smoother appearance */
+.ride-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.ride-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
